@@ -62,7 +62,7 @@
   <link rel="stylesheet" href="//fonts.loli.net/css?family=Inter:300,400,500,600|Open+Sans:400,600;display=swap">
   <link rel="stylesheet" href="//unpkg.com/nprogress@0.2.0/nprogress.css">
   <script>window.supportedLangs=["en-US","zh-CN"];</script>
-  <script>(()=>{const o=window.supportedLangs,a="preferred_lang",s="en-US",c={en:"en-US",fr:"fr-FR",es:"es-ES"};let t=localStorage.getItem(a)||navigator.language;const n=c[t]||(o.includes(t)?t:s);if(localStorage.setItem(a,n),t=n,!location.pathname.startsWith(`/${t}`)){const e=[`./${t}`].concat(location.pathname.split("/").slice(2)).join("/");location.pathname=e.endsWith(".html")||e.endsWith("/")?e:e.concat("/")}})();</script>
+  <script>(()=>{const o=window.supportedLangs,a="preferred_lang",s="en-US",c={en:"en-US",fr:"fr-FR",es:"es-ES"};let t=localStorage.getItem(a)||navigator.language;const n=c[t]||(o.includes(t)?t:s);if(localStorage.setItem(a,n),t=n,!location.pathname.startsWith(`/${t}`)){const e=[`/vxComponent/${t}`].concat(location.pathname.split("/").slice(2)).join("/");location.pathname=e.endsWith(".html")||e.endsWith("/")?e:e.concat("/")}})();</script>
   <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-175337989-1"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-175337989-1");</script>
   <meta name="twitter:title" content="A Vue 3 UI Framework | Element Plus">
