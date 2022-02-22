@@ -17,7 +17,7 @@
   localStorage.setItem(cacheKey, language)
   userPreferredLang = language
   if (!location.pathname.startsWith(`/${userPreferredLang}`)) {
-    const toPath = [`/${userPreferredLang}`]
+    const toPath = [`./${userPreferredLang}`]
       .concat(location.pathname.split('/').slice(2))
       .join('/')
     location.pathname =
