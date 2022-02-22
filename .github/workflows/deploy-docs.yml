@@ -2,7 +2,7 @@ name: Deploy Docs Website
 
 on:
   workflow_run:
-    workflows: ['Publish to NPM registry']
+    workflows: ['Coverage']
     types: [completed]
 
 jobs:
