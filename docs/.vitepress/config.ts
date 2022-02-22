@@ -45,7 +45,7 @@ languages.forEach((lang) => {
 
 export const config: UserConfig = {
   title: 'Element Plus',
-  base: 'vxComponent',
+  base: '/vxComponent/',
   description: 'a Vue 3 based component library for designers and developers',
   head,
   themeConfig: {
