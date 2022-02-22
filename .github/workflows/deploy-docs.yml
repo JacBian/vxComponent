@@ -25,7 +25,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-
+        
+      - name: Install latest Element Plus
+        run: cd docs && pnpm i element-plus@latest
+        
       - name: Build website
         run: pnpm docs:build
         env:
