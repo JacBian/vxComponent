@@ -2,9 +2,6 @@ name: Deploy Docs Website
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ['Publish to NPM registry']
-    types: [completed]
 
 jobs:
   deploy-docs:
