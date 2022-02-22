@@ -57,39 +57,39 @@ onMounted(async () => {
     { capture: true }
   )
 
-  if (lang.value === 'zh-CN') {
-    if (location.host === 'element-plus.gitee.io') return
-    const userPrefer = window.localStorage.getItem(USER_PREFER_GITHUB_PAGE)
-    if (userPrefer) {
-      // no alert in the next 90 days
-      if (
-        dayjs
-          .unix(Number(userPrefer))
-          .add(90, 'day')
-          .diff(dayjs(), 'day', true) > 0
-      )
-        return
-    }
-    try {
-      await ElMessageBox.confirm(
-        '建议大陆用户访问部署在国内的站点，是否跳转？',
-        '提示',
-        {
-          confirmButtonText: '跳转',
-          cancelButtonText: '取消',
-        }
-      )
-      const toLang = '/zh-CN/'
-      location.href = `https://element-plus.gitee.io${toLang}${location.pathname.slice(
-        toLang.length
-      )}`
-    } catch {
-      window.localStorage.setItem(
-        USER_PREFER_GITHUB_PAGE,
-        String(dayjs().unix())
-      )
-    }
-  }
+  // if (lang.value === 'zh-CN') {
+  //   if (location.host === 'element-plus.gitee.io') return
+  //   const userPrefer = window.localStorage.getItem(USER_PREFER_GITHUB_PAGE)
+  //   if (userPrefer) {
+  //     // no alert in the next 90 days
+  //     if (
+  //       dayjs
+  //         .unix(Number(userPrefer))
+  //         .add(90, 'day')
+  //         .diff(dayjs(), 'day', true) > 0
+  //     )
+  //       return
+  //   }
+  //   try {
+  //     await ElMessageBox.confirm(
+  //       '建议大陆用户访问部署在国内的站点，是否跳转？',
+  //       '提示',
+  //       {
+  //         confirmButtonText: '跳转',
+  //         cancelButtonText: '取消',
+  //       }
+  //     )
+  //     const toLang = '/zh-CN/'
+  //     location.href = `https://element-plus.gitee.io${toLang}${location.pathname.slice(
+  //       toLang.length
+  //     )}`
+  //   } catch {
+  //     window.localStorage.setItem(
+  //       USER_PREFER_GITHUB_PAGE,
+  //       String(dayjs().unix())
+  //     )
+  //   }
+  // }
 })
 </script>
 
